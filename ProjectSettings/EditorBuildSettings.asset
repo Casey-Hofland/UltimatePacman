@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Project/Scenes/Start Menu.unity
+    guid: 67a30c4746af773468421cb18bf37e4e
+  - enabled: 1
+    path: Assets/_Project/Scenes/Pacman.unity
+    guid: 84b8d5061f3a2494c882a95aafdee5a4
+  - enabled: 1
+    path: Assets/_Project/Scenes/Game Over.unity
+    guid: 6cbe08eb6d5aeb246ace95aeb0a36af0
+  - enabled: 1
+    path: Assets/_Project/Scenes/You Win.unity
+    guid: d25bc37e4eb631548b9375b9df7bdf8c
+  m_configObjects: {}
