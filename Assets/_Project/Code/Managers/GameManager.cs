@@ -5,7 +5,7 @@ using UnityEngine;
 public sealed class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private string nextScene = "You Win";
+    private string nextScene = "You Win";   // This code is used for testing, for a long-term solution a system would have to be implemented to handle scene transitions.
 
     private List<Ghost> ghosts = new List<Ghost>();
     private float duration = 0f;
@@ -35,6 +35,7 @@ public sealed class GameManager : MonoBehaviour
         ghosts.Remove(ghost);
     }
 
+    // Accessor to set the ghosts in their vulnerable state for the running duration
     public void SetGhostsVulnerable(float _duration)
     {
         if (ghostsVulnerable != null)
@@ -76,6 +77,7 @@ public sealed class GameManager : MonoBehaviour
 
     public void CheckPellets()
     {
+        // Check if all pellets have been eaten and the game should quit
         if (Pellet.PelletCount == 0)
         {
             SoundManager.Instance.StopSound();

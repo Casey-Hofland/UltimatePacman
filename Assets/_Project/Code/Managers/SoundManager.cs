@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+// Very simple soundmanager, not to be used long-term in favor of Unity implementations for sound mixers and handling.
 [RequireComponent(typeof(AudioSource))]
 public class SoundManager : Singleton<SoundManager>
 {

@@ -25,7 +25,7 @@ public class FakeOut: GhostStateMachineBehaviour
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        // If the distance from the player is within FakeOut range, fly towards a random point on the map.
+        // If the distance from the player is within FakeOut range, fly towards a random point on the map. Otherwise, chase the player.
         Vector2 distance = (Vector2)player.position - (Vector2)transform.position;
         if (distance.sqrMagnitude <= sqrDistanceToFakeOut)
         {
@@ -46,7 +46,6 @@ public class FakeOut: GhostStateMachineBehaviour
     // Get a random point within the Playing Field's collider
     private void SetRandomPoint()
     {
-        //Bounds bounds = GameManager.Instance.Collider.bounds;
         if(Toolbox.Instance.TryGetValue<GameManager>(out GameManager gameManager))
         {
             Bounds bounds = gameManager.Collider.bounds;

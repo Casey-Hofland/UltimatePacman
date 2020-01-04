@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+// This class defines basic GhostStateMachineBehaviour. Inherit a new GhostStateMachineBehaviour from this class.
 [SharedBetweenAnimators]
 public abstract class GhostStateMachineBehaviour: StateMachineBehaviour
 {

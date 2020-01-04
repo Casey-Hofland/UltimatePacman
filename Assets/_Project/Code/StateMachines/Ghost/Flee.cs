@@ -3,7 +3,7 @@
 public class Flee : GhostStateMachineBehaviour
 {
     [SerializeField]
-    private float speedMultiplier = .5f;    // Multiply the speed by this value in OnStateEnter, divide by it in OnStateExit
+    private float speedMultiplier = .5f;    // Multiply the ghost speed by this value in OnStateEnter, divide by it in OnStateExit
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -14,6 +14,7 @@ public class Flee : GhostStateMachineBehaviour
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        // Flee from the player
         Vector2 distance = transform.position - player.position;
 
         movement.Move(distance);

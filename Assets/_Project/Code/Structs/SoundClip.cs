@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+// A simple SoundClip struct created mainly for its serialization benefit. Not to be used long-term.
 public struct SoundClip
 {
     public AudioClip clip;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+// A very badly written script that plays an effect at the start. Not to be counted on for long-term.
 [RequireComponent(typeof(AudioSource))]
 public class PlayIntroTune : MonoBehaviour
 {

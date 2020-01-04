@@ -22,6 +22,7 @@ public class Pellet : MonoBehaviour, IScore, ISound
         PelletCount--;
     }
 
+    // Adds score and plays a sound when the pellet is consumed and notifies the gamemanager.
     public virtual void Consume()
     {
         Destroy(gameObject);

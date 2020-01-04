@@ -16,7 +16,7 @@ public class Flank: GhostStateMachineBehaviour
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        // Find the point flankingPointMultiplier times farther than from Blinky (Red ghost) to the player (Pacman)
+        // Chase the point that encloses the player within this ghost and the red ghost.
         Vector2 playerPoint = (Vector2)player.position + (Vector2)player.right * distanceInFrontOfPlayer;
         Vector2 blinkyPoint = (Vector2)flankBase.position;
         Vector2 flankingPoint = blinkyPoint + ((playerPoint - blinkyPoint) * flankingPointMultiplier);

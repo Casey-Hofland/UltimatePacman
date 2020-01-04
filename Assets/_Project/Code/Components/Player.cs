@@ -55,6 +55,7 @@ public class Player : MonoBehaviour, ISound
         movement.Move(transform.right);
     }
 
+    // Animate Pacmans mouth. This could have simply been done with an Animator, but I tried to do it this way to test out my LerpValue class (inside Framework)
     private void AnimateMouth()
     {
         // Update mouth angle
@@ -66,7 +67,7 @@ public class Player : MonoBehaviour, ISound
         shape.settings.endAngle = 360f - mouthAngle.Current;
     }
 
-    // Decide what to do when hit and when the collision came from a ghost
+    // Decide what to do when hit by a ghost
     public void HandleGhostCollision(Collision2D collision)
     {
         Ghost ghost = collision.transform.GetComponent<Ghost>();
@@ -84,6 +85,7 @@ public class Player : MonoBehaviour, ISound
         }
     }
 
+    // Plays an effect for when the player dies. Further comments inside function.
     private IEnumerator Die()
     {
         // Pause the game

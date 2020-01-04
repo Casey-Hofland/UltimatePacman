@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Very simple SceneHandler for handling switching scenes. Should be heavily upgraded for long-term use.
 public class SceneHandler : Singleton<SceneHandler>
 {
     public void LoadScene(string name)

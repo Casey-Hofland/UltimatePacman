@@ -1,4 +1,5 @@
-﻿public class ScoreManager : Singleton<ScoreManager>
+﻿// A simple manager to track score. Unused in this application but kept for expansion purposes.
+public class ScoreManager : Singleton<ScoreManager>
 {
     public float CurrentScore { get; private set; } = 0f;
 

@@ -21,6 +21,7 @@ public class ChoseGhostBehaviour : StateMachineBehaviour
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
+        // Reset the State Parameter
         animator.SetInteger(integerName, default);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using UnityEditor;
 using UnityEditor.AnimatedValues;
 
+// Editor Drawer for the Ghost. This ensures no unnecessary properties are shown in the Ghost Component at any given moment. 
 [CustomEditor(typeof(Ghost))]
 [CanEditMultipleObjects]
 public class GhostDrawer : Editor
@@ -15,6 +16,7 @@ public class GhostDrawer : Editor
 
     private void OnEnable()
     {
+        // Cache properties
         behaviour = serializedObject.FindProperty("behaviour");
         showFlankBase = new AnimBool(BehaviourIsFlank);
         flankBase = serializedObject.FindProperty("flankBase");
@@ -24,6 +26,7 @@ public class GhostDrawer : Editor
 
     public override void OnInspectorGUI()
     {
+        // Draw properties
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(behaviour, true);

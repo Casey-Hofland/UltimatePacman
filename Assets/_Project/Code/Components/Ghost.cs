@@ -13,6 +13,7 @@ public class Ghost : MonoBehaviour, IScore, ISound
     [SerializeField]
     private float scoreValue = 200f;
 
+    // Make certain values Readable (but never writable!) by the system.
     public Animator Animator { get; protected set; }
     public GhostBehaviour Behaviour => behaviour;
     public Transform FlankBase => flankBase;
@@ -44,6 +45,7 @@ public class Ghost : MonoBehaviour, IScore, ISound
         StartCoroutine(ConsumeCoroutine());
     }
 
+    // Plays an effect for when the ghost is consumed, meaning adding score, playing a sound, changing the music and briefly pause the game.
     private IEnumerator ConsumeCoroutine()
     {
         ScoreManager.Instance.AddScore(this);

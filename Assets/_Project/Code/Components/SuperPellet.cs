@@ -41,6 +41,7 @@ public class SuperPellet : Pellet
         AnimateSize();
     }
 
+    // Animates the pellet growing and shrinking
     private void AnimateSize()
     {
         sizeLerp.Update();
